@@ -48,8 +48,25 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
+        "x": 540,
         "y": 120,
         "wires": []
+    },
+    {
+        "id": "ef841d560ad31f62",
+        "type": "function",
+        "z": "4d4a601f90359c77",
+        "name": "function 1",
+        "func": "node.send(msg);\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 120,
+        "wires": [
+            []
+        ]
     }
 ]
