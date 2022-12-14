@@ -2,23 +2,7 @@
     {
         "id": "4d4a601f90359c77",
         "type": "tab",
-        "label": "Naveen",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "5cdd49bbee777e03",
-        "type": "tab",
-        "label": "poornima",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "060b6c9128cddfa4",
-        "type": "tab",
-        "label": "poorima2",
+        "label": "Tamil",
         "disabled": false,
         "info": "",
         "env": []
@@ -78,116 +62,6 @@
         "expiry": "",
         "x": 650,
         "y": 260,
-        "wires": []
-    },
-    {
-        "id": "23022b78d4a918b1",
-        "type": "function",
-        "z": "5cdd49bbee777e03",
-        "name": "function 1",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 260,
-        "wires": [
-            [
-                "4e20578a8d76f1d7"
-            ]
-        ]
-    },
-    {
-        "id": "d2f972d60a6cc415",
-        "type": "inject",
-        "z": "5cdd49bbee777e03",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 240,
-        "wires": [
-            [
-                "23022b78d4a918b1"
-            ]
-        ]
-    },
-    {
-        "id": "4e20578a8d76f1d7",
-        "type": "debug",
-        "z": "5cdd49bbee777e03",
-        "name": "debug 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 760,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "acaa1d8fecfd4d43",
-        "type": "catch",
-        "z": "060b6c9128cddfa4",
-        "name": "",
-        "scope": null,
-        "uncaught": false,
-        "x": 320,
-        "y": 200,
-        "wires": [
-            [
-                "8095502543d74ee7"
-            ]
-        ]
-    },
-    {
-        "id": "a06aa570b2a39c96",
-        "type": "complete",
-        "z": "060b6c9128cddfa4",
-        "name": "",
-        "scope": [],
-        "uncaught": false,
-        "x": 570,
-        "y": 380,
-        "wires": [
-            [
-                "8095502543d74ee7"
-            ]
-        ]
-    },
-    {
-        "id": "8095502543d74ee7",
-        "type": "debug",
-        "z": "060b6c9128cddfa4",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 840,
-        "y": 200,
         "wires": []
     }
 ]
