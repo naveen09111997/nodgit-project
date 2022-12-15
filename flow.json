@@ -28,12 +28,31 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
-        "y": 60,
+        "x": 120,
+        "y": 720,
         "wires": [
             [
+                "a4bb11e966ccbc61",
+                "d59c65e092c46b89",
                 "f5465ab8253c14cd",
-                "d59c65e092c46b89"
+                "2d28f30ffce998d5",
+                "de155514d29bf53b",
+                "d4ec8b042ca1a68e",
+                "8baafbf894e80d67",
+                "3cd9ae97481a07fa",
+                "385badf2432e2506",
+                "327f77b461c77d32",
+                "67183a318aee42f7",
+                "57f6a04358e2d21b",
+                "d5082257b79c42b9",
+                "3e39236505f54297",
+                "cf049816e756d6be",
+                "251410c8775d372e",
+                "f8f97578b5372bc3",
+                "588b535d47cffb67",
+                "3b823851e4d9d90d",
+                "a88b156de164c616",
+                "f8829e3091289027"
             ]
         ]
     },
@@ -41,7 +60,7 @@
         "id": "f5465ab8253c14cd",
         "type": "exec",
         "z": "4d4a601f90359c77",
-        "command": "sudo docker ps",
+        "command": "lsb_release -a",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -49,7 +68,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 440,
+        "x": 540,
         "y": 60,
         "wires": [
             [
@@ -71,8 +90,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
-        "y": 40,
+        "x": 1120,
+        "y": 720,
         "wires": []
     },
     {
@@ -87,12 +106,492 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 450,
+        "x": 550,
         "y": 120,
         "wires": [
             [
                 "e86fc56ff10cab8f"
             ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a4bb11e966ccbc61",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "cat /etc/netplan/01-network-manager-all.yaml",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 630,
+        "y": 180,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2d28f30ffce998d5",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "python3 --version",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 550,
+        "y": 240,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "de155514d29bf53b",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "service mysql status",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 560,
+        "y": 300,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d4ec8b042ca1a68e",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "service readDDT status",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 570,
+        "y": 360,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8baafbf894e80d67",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "service readDDTfast status",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 580,
+        "y": 420,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3cd9ae97481a07fa",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "service scaback status",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 560,
+        "y": 480,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "385badf2432e2506",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "service grafana status",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 560,
+        "y": 540,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "327f77b461c77d32",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "service influxdb status",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 560,
+        "y": 600,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "67183a318aee42f7",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "netstat -tunip",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "FTP",
+        "x": 510,
+        "y": 660,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "57f6a04358e2d21b",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "service docker status",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Docker",
+        "x": 520,
+        "y": 720,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d5082257b79c42b9",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "htop",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "cron",
+        "x": 510,
+        "y": 780,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3e39236505f54297",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "service ntp status",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "NTP",
+        "x": 510,
+        "y": 840,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "cf049816e756d6be",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "service apache2 status",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Apache2",
+        "x": 520,
+        "y": 900,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "251410c8775d372e",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "php5 --version",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "php5",
+        "x": 510,
+        "y": 960,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f8f97578b5372bc3",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "nodejs --version",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "NodeJS",
+        "x": 520,
+        "y": 1020,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "588b535d47cffb67",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "grafana --version",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Grafana version",
+        "x": 540,
+        "y": 1080,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3b823851e4d9d90d",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "influxdb -v",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "influxdb version",
+        "x": 540,
+        "y": 1140,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a88b156de164c616",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "service grafana-server status",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Grafana-server",
+        "x": 540,
+        "y": 1200,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "325fc660157af17b",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "php -v",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "PHP",
+        "x": 510,
+        "y": 1260,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f8829e3091289027",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "service iplon-opcua status",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "OPCUA",
+        "x": 520,
+        "y": 1320,
+        "wires": [
+            [
+                "e86fc56ff10cab8f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1029f18c030f67ee",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 510,
+        "y": 1380,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4547ed377a3d36f4",
+        "type": "exec",
+        "z": "4d4a601f90359c77",
+        "command": "",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 510,
+        "y": 1440,
+        "wires": [
+            [],
             [],
             []
         ]
