@@ -24,6 +24,14 @@
         "env": []
     },
     {
+        "id": "295391bc2a13335d",
+        "type": "tab",
+        "label": "Docker",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "7f71acda637c7228",
         "type": "ui_group",
         "name": "Service status",
@@ -41,7 +49,7 @@
         "tab": "2ec0a85050a0b4f1",
         "order": 2,
         "disp": true,
-        "width": "10",
+        "width": 24,
         "collapse": false,
         "className": ""
     },
@@ -81,6 +89,182 @@
         "width": 15,
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "39eb80b275a5c730",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d19cc7c9244b5452",
+        "type": "ui_tab",
+        "name": "Docker Container",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "614105640152bd3e",
+        "type": "ui_group",
+        "name": "Docker container",
+        "tab": "d19cc7c9244b5452",
+        "order": 1,
+        "disp": true,
+        "width": 25,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ce0e36e049d74bdb",
+        "type": "ui_spacer",
+        "z": "295391bc2a13335d",
+        "name": "spacer",
+        "group": "614105640152bd3e",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "6104507784b23e35",
+        "type": "ui_spacer",
+        "z": "295391bc2a13335d",
+        "name": "spacer",
+        "group": "614105640152bd3e",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "cd8f60744a1c171b",
+        "type": "ui_spacer",
+        "z": "295391bc2a13335d",
+        "name": "spacer",
+        "group": "614105640152bd3e",
+        "order": 5,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "4c2083cd79785580",
+        "type": "ui_spacer",
+        "z": "295391bc2a13335d",
+        "name": "spacer",
+        "group": "614105640152bd3e",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "88848493e2a96331",
+        "type": "ui_spacer",
+        "z": "295391bc2a13335d",
+        "name": "spacer",
+        "group": "614105640152bd3e",
+        "order": 7,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "86a26f2237b0e7a6",
+        "type": "ui_spacer",
+        "z": "295391bc2a13335d",
+        "name": "spacer",
+        "group": "614105640152bd3e",
+        "order": 8,
+        "width": 3,
+        "height": 1
     },
     {
         "id": "9311e21b730392da",
@@ -1856,7 +2040,7 @@
         "z": "3bdf067d13d3638c",
         "name": "",
         "group": "7f71acda637c7228",
-        "order": 19,
+        "order": 21,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -1882,7 +2066,7 @@
         "id": "a85bfedf1c9b9fbd",
         "type": "ui_led",
         "z": "3bdf067d13d3638c",
-        "order": 20,
+        "order": 22,
         "group": "7f71acda637c7228",
         "width": 2,
         "height": 1,
@@ -2024,7 +2208,7 @@
         "z": "3bdf067d13d3638c",
         "name": "",
         "group": "7f71acda637c7228",
-        "order": 21,
+        "order": 23,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -2050,7 +2234,7 @@
         "id": "7db608475a5352af",
         "type": "ui_led",
         "z": "3bdf067d13d3638c",
-        "order": 22,
+        "order": 24,
         "group": "7f71acda637c7228",
         "width": 2,
         "height": 1,
@@ -2192,7 +2376,7 @@
         "z": "3bdf067d13d3638c",
         "name": "",
         "group": "7f71acda637c7228",
-        "order": 23,
+        "order": 25,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -2218,7 +2402,7 @@
         "id": "9c4397d15ec4260d",
         "type": "ui_led",
         "z": "3bdf067d13d3638c",
-        "order": 24,
+        "order": 26,
         "group": "7f71acda637c7228",
         "width": 2,
         "height": 1,
@@ -2336,15 +2520,15 @@
         "id": "02fa41e13d56cbb2",
         "type": "exec",
         "z": "3bdf067d13d3638c",
-        "command": "docker exec -i iot6_ubuntu14.04 bash service apache2 status",
-        "addpay": "",
+        "command": "docker exec -itubuntu1 bash service ssh status",
+        "addpay": "payload",
         "append": "",
         "useSpawn": "false",
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "apache",
-        "x": 380,
+        "name": "ubuntu docker exec",
+        "x": 410,
         "y": 1320,
         "wires": [
             [
@@ -2360,7 +2544,7 @@
         "z": "3bdf067d13d3638c",
         "name": "",
         "group": "7f71acda637c7228",
-        "order": 25,
+        "order": 27,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -2386,7 +2570,7 @@
         "id": "3d350833bb2ef514",
         "type": "ui_led",
         "z": "3bdf067d13d3638c",
-        "order": 26,
+        "order": 28,
         "group": "7f71acda637c7228",
         "width": 2,
         "height": 1,
@@ -2669,6 +2853,174 @@
         ]
     },
     {
+        "id": "6b170470ee2615c3",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service tunnelvpn status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 430,
+        "y": 1420,
+        "wires": [
+            [
+                "9c53dba65c7a3c78"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "96567da2b0dd8732",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 19,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "open vpn",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 160,
+        "y": 1420,
+        "wires": [
+            [
+                "6b170470ee2615c3"
+            ]
+        ]
+    },
+    {
+        "id": "9866be02d368437d",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 20,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "9c53dba65c7a3c78",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 1420,
+        "wires": [
+            [
+                "d2d692d463569d79"
+            ],
+            [
+                "5b273fce2fc00241"
+            ]
+        ]
+    },
+    {
+        "id": "d2d692d463569d79",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 1400,
+        "wires": [
+            [
+                "9866be02d368437d"
+            ]
+        ]
+    },
+    {
+        "id": "5b273fce2fc00241",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 1440,
+        "wires": [
+            [
+                "9866be02d368437d"
+            ]
+        ]
+    },
+    {
         "id": "3198474bc8b88bea",
         "type": "exec",
         "z": "67ac21ea7605a192",
@@ -2695,10 +3047,10 @@
         "type": "ui_text",
         "z": "67ac21ea7605a192",
         "group": "a25745f191dc24a3",
-        "order": 6,
-        "width": 7,
+        "order": 10,
+        "width": 21,
         "height": 1,
-        "name": "",
+        "name": "python",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-center",
@@ -2713,7 +3065,7 @@
         "z": "67ac21ea7605a192",
         "name": "",
         "group": "a25745f191dc24a3",
-        "order": 5,
+        "order": 9,
         "width": 3,
         "height": 1,
         "passthru": true,
@@ -2762,10 +3114,10 @@
         "type": "ui_text",
         "z": "67ac21ea7605a192",
         "group": "a25745f191dc24a3",
-        "order": 12,
-        "width": 7,
+        "order": 16,
+        "width": 21,
         "height": 1,
-        "name": "",
+        "name": "node",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-center",
@@ -2780,7 +3132,7 @@
         "z": "67ac21ea7605a192",
         "name": "",
         "group": "a25745f191dc24a3",
-        "order": 11,
+        "order": 15,
         "width": 3,
         "height": 1,
         "passthru": true,
@@ -2829,10 +3181,10 @@
         "type": "ui_text",
         "z": "67ac21ea7605a192",
         "group": "a25745f191dc24a3",
-        "order": 8,
-        "width": 7,
-        "height": 1,
-        "name": "",
+        "order": 14,
+        "width": 21,
+        "height": 2,
+        "name": "ftp",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-center",
@@ -2847,9 +3199,9 @@
         "z": "67ac21ea7605a192",
         "name": "",
         "group": "a25745f191dc24a3",
-        "order": 7,
+        "order": 13,
         "width": 3,
-        "height": 1,
+        "height": 2,
         "passthru": true,
         "label": "ftp",
         "tooltip": "",
@@ -2896,10 +3248,10 @@
         "type": "ui_text",
         "z": "67ac21ea7605a192",
         "group": "a25745f191dc24a3",
-        "order": 10,
-        "width": 7,
+        "order": 2,
+        "width": 21,
         "height": 1,
-        "name": "",
+        "name": "php5",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-center",
@@ -2914,7 +3266,7 @@
         "z": "67ac21ea7605a192",
         "name": "",
         "group": "a25745f191dc24a3",
-        "order": 9,
+        "order": 1,
         "width": 3,
         "height": 1,
         "passthru": true,
@@ -2963,10 +3315,10 @@
         "type": "ui_text",
         "z": "67ac21ea7605a192",
         "group": "a25745f191dc24a3",
-        "order": 14,
-        "width": 7,
+        "order": 6,
+        "width": 21,
         "height": 1,
-        "name": "",
+        "name": "grfna",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-center",
@@ -2981,7 +3333,7 @@
         "z": "67ac21ea7605a192",
         "name": "",
         "group": "a25745f191dc24a3",
-        "order": 13,
+        "order": 5,
         "width": 3,
         "height": 1,
         "passthru": true,
@@ -3016,7 +3368,7 @@
         "oldrc": false,
         "name": "",
         "x": 350,
-        "y": 480,
+        "y": 560,
         "wires": [
             [
                 "506693600f2dd3aa"
@@ -3030,16 +3382,16 @@
         "type": "ui_text",
         "z": "67ac21ea7605a192",
         "group": "a25745f191dc24a3",
-        "order": 16,
-        "width": 7,
+        "order": 12,
+        "width": 21,
         "height": 1,
-        "name": "",
+        "name": "php",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-center",
         "className": "",
         "x": 570,
-        "y": 480,
+        "y": 560,
         "wires": []
     },
     {
@@ -3048,7 +3400,7 @@
         "z": "67ac21ea7605a192",
         "name": "",
         "group": "a25745f191dc24a3",
-        "order": 15,
+        "order": 11,
         "width": 3,
         "height": 1,
         "passthru": true,
@@ -3063,10 +3415,257 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 190,
-        "y": 480,
+        "y": 560,
         "wires": [
             [
                 "7e77269a8b398557"
+            ]
+        ]
+    },
+    {
+        "id": "81ee6aef4207faeb",
+        "type": "exec",
+        "z": "67ac21ea7605a192",
+        "command": "nodejs --version",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 380,
+        "y": 640,
+        "wires": [
+            [
+                "70cd7002a8f76a38"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "70cd7002a8f76a38",
+        "type": "ui_text",
+        "z": "67ac21ea7605a192",
+        "group": "a25745f191dc24a3",
+        "order": 4,
+        "width": 21,
+        "height": 1,
+        "name": "NJ",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 570,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "2aa1b351fbf59eda",
+        "type": "ui_button",
+        "z": "67ac21ea7605a192",
+        "name": "",
+        "group": "a25745f191dc24a3",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "label": "nodejs version",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 200,
+        "y": 640,
+        "wires": [
+            [
+                "81ee6aef4207faeb"
+            ]
+        ]
+    },
+    {
+        "id": "e89ff437ec01a2f0",
+        "type": "exec",
+        "z": "67ac21ea7605a192",
+        "command": "influxdb --version",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 390,
+        "y": 480,
+        "wires": [
+            [
+                "b23fba69e3c712cc"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b23fba69e3c712cc",
+        "type": "ui_text",
+        "z": "67ac21ea7605a192",
+        "group": "a25745f191dc24a3",
+        "order": 8,
+        "width": 21,
+        "height": 1,
+        "name": "IDB",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 570,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "132cad09e445238b",
+        "type": "ui_button",
+        "z": "67ac21ea7605a192",
+        "name": "",
+        "group": "a25745f191dc24a3",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "label": "influxdb version",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 200,
+        "y": 480,
+        "wires": [
+            [
+                "e89ff437ec01a2f0"
+            ]
+        ]
+    },
+    {
+        "id": "cd133d0896bf0766",
+        "type": "exec",
+        "z": "295391bc2a13335d",
+        "command": "docker ps -a",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 530,
+        "y": 100,
+        "wires": [
+            [
+                "e8526b76919bea37",
+                "34cfafa05d38b102"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e8526b76919bea37",
+        "type": "ui_text",
+        "z": "295391bc2a13335d",
+        "group": "614105640152bd3e",
+        "order": 2,
+        "width": 22,
+        "height": 7,
+        "name": "Dps",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 790,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e7ac6af635b328e2",
+        "type": "ui_button",
+        "z": "295391bc2a13335d",
+        "name": "",
+        "group": "614105640152bd3e",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "label": "Docker Containers",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 250,
+        "y": 100,
+        "wires": [
+            [
+                "cd133d0896bf0766"
+            ]
+        ]
+    },
+    {
+        "id": "34cfafa05d38b102",
+        "type": "debug",
+        "z": "295391bc2a13335d",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0f0e4e8f7c0e971d",
+        "type": "inject",
+        "z": "295391bc2a13335d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "e7ac6af635b328e2"
             ]
         ]
     }
