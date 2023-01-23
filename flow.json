@@ -2520,7 +2520,7 @@
         "id": "02fa41e13d56cbb2",
         "type": "exec",
         "z": "3bdf067d13d3638c",
-        "command": "docker exec -itubuntu1 bash service ssh status",
+        "command": "docker exec -i ubuntu1 bash service ssh status",
         "addpay": "payload",
         "append": "",
         "useSpawn": "false",
