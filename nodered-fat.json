@@ -1,0 +1,2382 @@
+[
+    {
+        "id": "3bdf067d13d3638c",
+        "type": "tab",
+        "label": "SERVICE",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "66dde00e5c8ef484",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service ssh status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "dd83d5a77dc9c43c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7d1a0798eb268a40",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 2,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "6935fd844b6c3f64",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "SSH Status",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "66dde00e5c8ef484"
+            ]
+        ]
+    },
+    {
+        "id": "dd83d5a77dc9c43c",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 100,
+        "wires": [
+            [
+                "0bbe4ec606c2235b"
+            ],
+            [
+                "3dbd4ad3f4c22460"
+            ]
+        ]
+    },
+    {
+        "id": "0bbe4ec606c2235b",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 80,
+        "wires": [
+            [
+                "7d1a0798eb268a40"
+            ]
+        ]
+    },
+    {
+        "id": "3dbd4ad3f4c22460",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 120,
+        "wires": [
+            [
+                "7d1a0798eb268a40"
+            ]
+        ]
+    },
+    {
+        "id": "dd51ac3fb2f71cf1",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service influxdb status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 420,
+        "y": 220,
+        "wires": [
+            [
+                "ea4adeecda91ef42"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "dbcd044c52ba49e0",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 15,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "influxdb status",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 180,
+        "y": 220,
+        "wires": [
+            [
+                "dd51ac3fb2f71cf1"
+            ]
+        ]
+    },
+    {
+        "id": "cfe794b8621bd1c5",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 16,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ea4adeecda91ef42",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 220,
+        "wires": [
+            [
+                "54e7b724a299639d"
+            ],
+            [
+                "d0fddc06cd57fec9"
+            ]
+        ]
+    },
+    {
+        "id": "54e7b724a299639d",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 200,
+        "wires": [
+            [
+                "cfe794b8621bd1c5"
+            ]
+        ]
+    },
+    {
+        "id": "d0fddc06cd57fec9",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 240,
+        "wires": [
+            [
+                "cfe794b8621bd1c5"
+            ]
+        ]
+    },
+    {
+        "id": "eb7351210f15f081",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service mysql status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 420,
+        "y": 320,
+        "wires": [
+            [
+                "3f150cdc223947ef"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8d1a3441e3b69b6b",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "mysql",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "eb7351210f15f081"
+            ]
+        ]
+    },
+    {
+        "id": "3f68deffc9afb298",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 4,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3f150cdc223947ef",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 320,
+        "wires": [
+            [
+                "3ab0bcd6ccf1a1c7"
+            ],
+            [
+                "a61a62b7f079cd94"
+            ]
+        ]
+    },
+    {
+        "id": "3ab0bcd6ccf1a1c7",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 300,
+        "wires": [
+            [
+                "3f68deffc9afb298"
+            ]
+        ]
+    },
+    {
+        "id": "a61a62b7f079cd94",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 340,
+        "wires": [
+            [
+                "3f68deffc9afb298"
+            ]
+        ]
+    },
+    {
+        "id": "f5459062f615381a",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service readDDT status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "79d2e17445adc038"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "437ec5e71cac0e2e",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "readDDT",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 160,
+        "y": 420,
+        "wires": [
+            [
+                "f5459062f615381a"
+            ]
+        ]
+    },
+    {
+        "id": "bda53572a31b2234",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 6,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "79d2e17445adc038",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 420,
+        "wires": [
+            [
+                "3aead4f59b8df697"
+            ],
+            [
+                "732f01d24778aab1"
+            ]
+        ]
+    },
+    {
+        "id": "3aead4f59b8df697",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 400,
+        "wires": [
+            [
+                "bda53572a31b2234"
+            ]
+        ]
+    },
+    {
+        "id": "732f01d24778aab1",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 440,
+        "wires": [
+            [
+                "bda53572a31b2234"
+            ]
+        ]
+    },
+    {
+        "id": "079fde919c01a312",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service readDDTfast status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 440,
+        "y": 520,
+        "wires": [
+            [
+                "f14d36bbde8c8c69"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "dff5cbc2a7e32fc3",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "readDDTfast",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 170,
+        "y": 520,
+        "wires": [
+            [
+                "079fde919c01a312"
+            ]
+        ]
+    },
+    {
+        "id": "c5075ebf9728cec9",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 8,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "f14d36bbde8c8c69",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 520,
+        "wires": [
+            [
+                "01a62b52a592be5a"
+            ],
+            [
+                "ac788df4b84574ca"
+            ]
+        ]
+    },
+    {
+        "id": "01a62b52a592be5a",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 500,
+        "wires": [
+            [
+                "c5075ebf9728cec9"
+            ]
+        ]
+    },
+    {
+        "id": "ac788df4b84574ca",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 540,
+        "wires": [
+            [
+                "c5075ebf9728cec9"
+            ]
+        ]
+    },
+    {
+        "id": "ea114d289b9cf13a",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service scaback status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 420,
+        "y": 620,
+        "wires": [
+            [
+                "ad474f9185c5c71b"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "66a234d132cd5705",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 9,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "scaback",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 160,
+        "y": 620,
+        "wires": [
+            [
+                "ea114d289b9cf13a"
+            ]
+        ]
+    },
+    {
+        "id": "3f82733ee0bf4f33",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 10,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "ad474f9185c5c71b",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 620,
+        "wires": [
+            [
+                "34982ab958ab1a1e"
+            ],
+            [
+                "059a36d6e16a7a5a"
+            ]
+        ]
+    },
+    {
+        "id": "34982ab958ab1a1e",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 600,
+        "wires": [
+            [
+                "3f82733ee0bf4f33"
+            ]
+        ]
+    },
+    {
+        "id": "059a36d6e16a7a5a",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 640,
+        "wires": [
+            [
+                "3f82733ee0bf4f33"
+            ]
+        ]
+    },
+    {
+        "id": "f90c54d7ee0863fd",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service grafana-server status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 440,
+        "y": 820,
+        "wires": [
+            [
+                "f38d2f845f2bb4e3"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "07594b9b60560822",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 13,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "grafana",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 160,
+        "y": 820,
+        "wires": [
+            [
+                "f90c54d7ee0863fd"
+            ]
+        ]
+    },
+    {
+        "id": "c57ea7f941f90cda",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 14,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "f38d2f845f2bb4e3",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 820,
+        "wires": [
+            [
+                "290a41b39fcbf555"
+            ],
+            [
+                "7a0dbef51814430f"
+            ]
+        ]
+    },
+    {
+        "id": "290a41b39fcbf555",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 800,
+        "wires": [
+            [
+                "c57ea7f941f90cda"
+            ]
+        ]
+    },
+    {
+        "id": "7a0dbef51814430f",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 840,
+        "wires": [
+            [
+                "c57ea7f941f90cda"
+            ]
+        ]
+    },
+    {
+        "id": "ce7c24ae92b8476a",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service docker status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 420,
+        "y": 920,
+        "wires": [
+            [
+                "1b6a294a965e532b"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "065389126e3f9580",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 17,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "docker",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 150,
+        "y": 920,
+        "wires": [
+            [
+                "ce7c24ae92b8476a"
+            ]
+        ]
+    },
+    {
+        "id": "541fb007cc447b42",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 18,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "1b6a294a965e532b",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 920,
+        "wires": [
+            [
+                "bd13369c2797ea4f"
+            ],
+            [
+                "74a187fc2b67b266"
+            ]
+        ]
+    },
+    {
+        "id": "bd13369c2797ea4f",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 900,
+        "wires": [
+            [
+                "541fb007cc447b42"
+            ]
+        ]
+    },
+    {
+        "id": "74a187fc2b67b266",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 940,
+        "wires": [
+            [
+                "541fb007cc447b42"
+            ]
+        ]
+    },
+    {
+        "id": "c5b5e854ede49d17",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service ntp status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 410,
+        "y": 1020,
+        "wires": [
+            [
+                "65b3e41b230e0fe7"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "769a61b680619fe3",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 21,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "ntp",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 150,
+        "y": 1020,
+        "wires": [
+            [
+                "c5b5e854ede49d17"
+            ]
+        ]
+    },
+    {
+        "id": "a85bfedf1c9b9fbd",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 22,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "65b3e41b230e0fe7",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 1020,
+        "wires": [
+            [
+                "b81a63745bf95998"
+            ],
+            [
+                "bccaacc9fc8199ca"
+            ]
+        ]
+    },
+    {
+        "id": "b81a63745bf95998",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 1000,
+        "wires": [
+            [
+                "a85bfedf1c9b9fbd"
+            ]
+        ]
+    },
+    {
+        "id": "bccaacc9fc8199ca",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 1040,
+        "wires": [
+            [
+                "a85bfedf1c9b9fbd"
+            ]
+        ]
+    },
+    {
+        "id": "ba3779825bfae8ca",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service apache2 status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 420,
+        "y": 1120,
+        "wires": [
+            [
+                "6ca2e3e30cef646a"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4ce6fe05e7b15eef",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 23,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "apache",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 160,
+        "y": 1120,
+        "wires": [
+            [
+                "ba3779825bfae8ca"
+            ]
+        ]
+    },
+    {
+        "id": "7db608475a5352af",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 24,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "6ca2e3e30cef646a",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 1120,
+        "wires": [
+            [
+                "82c9302c02fb5d28"
+            ],
+            [
+                "d3fdd44a32e6e1b3"
+            ]
+        ]
+    },
+    {
+        "id": "82c9302c02fb5d28",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 1100,
+        "wires": [
+            [
+                "7db608475a5352af"
+            ]
+        ]
+    },
+    {
+        "id": "d3fdd44a32e6e1b3",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 1140,
+        "wires": [
+            [
+                "7db608475a5352af"
+            ]
+        ]
+    },
+    {
+        "id": "915c5fc1d747a1a9",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service iplon-opcua status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 430,
+        "y": 1220,
+        "wires": [
+            [
+                "b842332775e45213"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e2754dac5d759d73",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 25,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "opcua",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 150,
+        "y": 1220,
+        "wires": [
+            [
+                "915c5fc1d747a1a9"
+            ]
+        ]
+    },
+    {
+        "id": "9c4397d15ec4260d",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 26,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "b842332775e45213",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 1220,
+        "wires": [
+            [
+                "85fecb7feb1fddc3"
+            ],
+            [
+                "011b7a23569334fe"
+            ]
+        ]
+    },
+    {
+        "id": "85fecb7feb1fddc3",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 1200,
+        "wires": [
+            [
+                "9c4397d15ec4260d"
+            ]
+        ]
+    },
+    {
+        "id": "011b7a23569334fe",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 1240,
+        "wires": [
+            [
+                "9c4397d15ec4260d"
+            ]
+        ]
+    },
+    {
+        "id": "02fa41e13d56cbb2",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "docker exec -i ubuntu1 bash service ssh status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "ubuntu docker exec",
+        "x": 410,
+        "y": 1320,
+        "wires": [
+            [
+                "660c94d981b735e4"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "43a4677cf2152068",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 27,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "ubuntu docker",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 160,
+        "y": 1320,
+        "wires": [
+            [
+                "02fa41e13d56cbb2"
+            ]
+        ]
+    },
+    {
+        "id": "3d350833bb2ef514",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 28,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "660c94d981b735e4",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 1320,
+        "wires": [
+            [
+                "aabc16ec8582cede"
+            ],
+            [
+                "51b2e07b452ef3d4"
+            ]
+        ]
+    },
+    {
+        "id": "aabc16ec8582cede",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 1300,
+        "wires": [
+            [
+                "3d350833bb2ef514"
+            ]
+        ]
+    },
+    {
+        "id": "51b2e07b452ef3d4",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 1340,
+        "wires": [
+            [
+                "3d350833bb2ef514"
+            ]
+        ]
+    },
+    {
+        "id": "11d6c248b3955971",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service scaback Fast status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 440,
+        "y": 720,
+        "wires": [
+            [
+                "17e799cb4f820203"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "44bdc3050bd7eb4a",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 11,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "scabackFast",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 170,
+        "y": 720,
+        "wires": [
+            [
+                "11d6c248b3955971"
+            ]
+        ]
+    },
+    {
+        "id": "c476a470ad1696be",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 12,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "17e799cb4f820203",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 720,
+        "wires": [
+            [
+                "1ab95f6ba267f166"
+            ],
+            [
+                "22dea79a2434ba0a"
+            ]
+        ]
+    },
+    {
+        "id": "1ab95f6ba267f166",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 700,
+        "wires": [
+            [
+                "c476a470ad1696be"
+            ]
+        ]
+    },
+    {
+        "id": "22dea79a2434ba0a",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 740,
+        "wires": [
+            [
+                "c476a470ad1696be"
+            ]
+        ]
+    },
+    {
+        "id": "6b170470ee2615c3",
+        "type": "exec",
+        "z": "3bdf067d13d3638c",
+        "command": "service tunnelvpn status",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 430,
+        "y": 1420,
+        "wires": [
+            [
+                "9c53dba65c7a3c78"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "96567da2b0dd8732",
+        "type": "ui_button",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "group": "7f71acda637c7228",
+        "order": 19,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "open vpn",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 160,
+        "y": 1420,
+        "wires": [
+            [
+                "6b170470ee2615c3"
+            ]
+        ]
+    },
+    {
+        "id": "9866be02d368437d",
+        "type": "ui_led",
+        "z": "3bdf067d13d3638c",
+        "order": 20,
+        "group": "7f71acda637c7228",
+        "width": 2,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "9c53dba65c7a3c78",
+        "type": "switch",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "active (running)",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 1420,
+        "wires": [
+            [
+                "d2d692d463569d79"
+            ],
+            [
+                "5b273fce2fc00241"
+            ]
+        ]
+    },
+    {
+        "id": "d2d692d463569d79",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 1400,
+        "wires": [
+            [
+                "9866be02d368437d"
+            ]
+        ]
+    },
+    {
+        "id": "5b273fce2fc00241",
+        "type": "change",
+        "z": "3bdf067d13d3638c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 1440,
+        "wires": [
+            [
+                "9866be02d368437d"
+            ]
+        ]
+    },
+    {
+        "id": "7f71acda637c7228",
+        "type": "ui_group",
+        "name": "Service status",
+        "tab": "7bb7991e61fd25e5",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7bb7991e61fd25e5",
+        "type": "ui_tab",
+        "name": "FAT",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]
